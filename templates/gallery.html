@@ -1,0 +1,263 @@
+{% extends "base.html" %}
+
+{% block title %}Photos/Videos - Siri Chandrashekar{% endblock %}
+
+{% block content %}
+<section class="gallery-section section-padding">
+                <h2 id="photos"  class=" text-center  text-white">Photos</h2>
+  <div class="container">
+
+
+<div class="container my-5">
+  <div class="custom-gallery-grid">
+    <!-- Vertical carousel spanning 2 rows -->
+    <div class="gallery-cell gallery-cell-vertical">
+        <div class="gallery-pic-wrap h-100" style="cursor: pointer;" onclick="openGallery([
+      '{{ url_for('static', filename='images/artists/Vertical1.jpg') }}',
+      '{{ url_for('static', filename='images/artists/Vertical2.jpg') }}'
+    ])">
+      <div id="verticalCarousel" class="carousel slide carousel-fade gallery-pic-wrap h-100" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img src="{{ url_for('static', filename='images/artists/Vertical2.jpg') }}" class="w-100 h-100" alt="Vertical 1">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="{{ url_for('static', filename='images/artists/Vertical1.jpg') }}" class="w-100 h-100" alt="Vertical 2">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- Top row, 1/2 -->
+    <div class="gallery-cell">
+        <div class="gallery-pic-wrap h-100" style="cursor: pointer;" onclick="openGallery([
+      '{{ url_for('static', filename='images/artists/Hori1.jpg') }}',
+      '{{ url_for('static', filename='images/artists/Hori11.jpg') }}'
+    ])">
+      <div id="horiCarousel1" class="carousel slide carousel-fade gallery-pic-wrap h-100" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img src="{{ url_for('static', filename='images/artists/Hori1.jpg') }}" class="w-100 h-100" alt="Horizontal 1">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="{{ url_for('static', filename='images/artists/Hori11.jpg') }}" class="w-100 h-100" alt="Horizontal 11">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="gallery-cell">
+        <div class="gallery-pic-wrap h-100" style="cursor: pointer;" onclick="openGallery([
+      '{{ url_for('static', filename='images/artists/Hori2.jpg') }}',
+      '{{ url_for('static', filename='images/artists/Hori22.jpg') }}'
+    ])">
+      <div id="horiCarousel2" class="carousel slide carousel-fade gallery-pic-wrap h-100" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img src="{{ url_for('static', filename='images/artists/Hori2.jpg') }}" class="w-100 h-100" alt="Horizontal 2">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="{{ url_for('static', filename='images/artists/Hori22.jpg') }}" class="w-100 h-100" alt="Horizontal 22">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- Bottom row, 1/2 -->
+    <div class="gallery-cell">
+        <div class="gallery-pic-wrap h-100" style="cursor: pointer;" onclick="openGallery([
+      '{{ url_for('static', filename='images/artists/Hori3.jpg') }}',
+      '{{ url_for('static', filename='images/artists/Hori33.jpg') }}'
+    ])">
+      <div id="horiCarousel3" class="carousel slide carousel-fade gallery-pic-wrap h-100" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img src="{{ url_for('static', filename='images/artists/Hori3.jpg') }}" class="w-100 h-100" alt="Horizontal 3">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="{{ url_for('static', filename='images/artists/Hori33.jpg') }}" class="w-100 h-100" alt="Horizontal 33">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="gallery-cell">
+        <div class="gallery-pic-wrap h-100" style="cursor: pointer;" onclick="openGallery([
+      '{{ url_for('static', filename='images/artists/Hori4.jpg') }}',
+      '{{ url_for('static', filename='images/artists/Hori44.jpg') }}'
+    ])">
+      <div id="horiCarousel4" class="carousel slide carousel-fade gallery-pic-wrap h-100" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img src="{{ url_for('static', filename='images/artists/Hori4.jpg') }}" class="w-100 h-100" alt="Horizontal 4">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="{{ url_for('static', filename='images/artists/Hori44.jpg') }}" class="w-100 h-100" alt="Horizontal 44">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<!-- This is for popping up images -->
+
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content gallery-modal-bg">
+      <div class="modal-header">
+        <h5 class="modal-title text-white">Gallery - Siri Chandrashekar</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body d-flex justify-content-center gap-4 flex-wrap" id="galleryModalContent">
+        <!-- Images are dynamically inserted via JS -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+    <!-- Yellow horizontal divider -->
+    <div class="gallery-divider my-5" style="border-top: 4px solid #F8CB2E; width:100%;"></div>
+
+    <!-- Video Links Section Placeholder -->
+    <div class="gallery-videos-section">
+      <h2 id="videos" class="mb-4 text-center text-white">Videos</h2>
+      <!-- Here, insert your YouTube embeds or thumbnails as in your screenshot, e.g.: -->
+       <div class="videos-row d-flex flex-wrap justify-content-center gap-2">
+  <!-- Video card 1 -->
+  <div class="custom-video-card" style="flex: 1 1 300px; max-width: 400px;">
+    <a href="https://youtu.be/DIhBtd9xHm0?si=EWCy6TCP4NkmoSYX" target="_blank" rel="noopener">
+      <div class="video-thumb-bg" style="background-image: url('{{ url_for('static', filename='images/youtubevideo1.jpg') }}')">
+        <div class="video-card-overlay">
+          <div class="video-title">Varnam - Mathe Malayadhwaja</div>
+          <button type="button" class="video-play-btn">
+            <span class="video-play-icon"></span> Play Video
+          </button>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Video card 2 (duplicate, change content as needed) -->
+  <div class="custom-video-card" style="flex: 1 1 300px; max-width: 400px;">
+    <a href="https://youtu.be/eFStn24INfc?si=1F2lU7URFzGpRuNx" target="_blank" rel="noopener">
+      <div class="video-thumb-bg" style="background-image: url('{{ url_for('static', filename='images/youtubevideo2.jpg') }}')">
+        <div class="video-card-overlay">
+          <div class="video-title">Ananya Nruthyollasa</div>
+          <button type="button" class="video-play-btn">
+            <span class="video-play-icon"></span> Play Video
+          </button>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Video card 3 (duplicate, change content as needed) -->
+  <div class="custom-video-card" style="flex: 1 1 300px; max-width: 400px;">
+    <a href="https://youtu.be/3kXzORN-X9Y?si=x326Ig9rqjF5IPia" target="_blank" rel="noopener">
+      <div class="video-thumb-bg" style="background-image: url('{{ url_for('static', filename='images/youtubevideo3.jpg') }}')">
+        <div class="video-card-overlay">
+          <div class="video-title">Aadenamma - Shiva Stuti</div>
+          <button type="button" class="video-play-btn">
+            <span class="video-play-icon"></span> Play Video
+          </button>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="videos-row d-flex flex-wrap justify-content-center gap-2">
+  <!-- Video card 4 -->
+  <div class="custom-video-card" style="flex: 1 1 300px; max-width: 400px;">
+    <a href="https://youtu.be/iMzM2vbx6yg?si=Rat6lyms4IE-nnpV" target="_blank" rel="noopener">
+      <div class="video-thumb-bg" style="background-image: url('{{ url_for('static', filename='images/youtubevideo4.jpg') }}')">
+        <div class="video-card-overlay">
+          <div class="video-title">Navadurga - Skandamata</div>
+          <button type="button" class="video-play-btn">
+            <span class="video-play-icon"></span> Play Video
+          </button>
+        </div>
+      </div>
+    </a>
+  </div>
+
+    <!-- Video card 5 (duplicate, change content as needed) -->
+  <div class="custom-video-card" style="flex: 1 1 300px; max-width: 400px;">
+    <a href="https://youtu.be/rlZs_-YY6XQ?si=DIqMnoCSZxNe6V5S" target="_blank" rel="noopener">
+      <div class="video-thumb-bg" style="background-image: url('{{ url_for('static', filename='images/youtubevideo5.jpg') }}')">
+        <div class="video-card-overlay">
+          <div class="video-title">Natanotsava - Rotary Club</div>
+          <button type="button" class="video-play-btn">
+            <span class="video-play-icon"></span> Play Video
+          </button>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Video card 6 (duplicate, change content as needed) -->
+  <div class="custom-video-card" style="flex: 1 1 300px; max-width: 400px;">
+    <a href="https://youtu.be/AfNF6gj_kzE?si=4MZv6NtYONQTOsW-" target="_blank" rel="noopener">
+      <div class="video-thumb-bg" style="background-image: url('{{ url_for('static', filename='images/youtubevideo6.jpg') }}')">
+        <div class="video-card-overlay">
+          <div class="video-title">Arengetrum</div>
+          <button type="button" class="video-play-btn">
+            <span class="video-play-icon"></span> Play Video
+          </button>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<script>
+// Opens the modal and fills it with all images in the given list
+function openGallery(images) {
+  const container = document.getElementById('galleryModalContent');
+  container.innerHTML = '';
+  images.forEach(url => {
+    const img = document.createElement('img');
+    img.src = url;
+    img.style.maxWidth = '32vw';       // Each image up to a third of modal width on desktop
+    img.style.width = '100%';          // Fill available width
+    img.style.height = 'auto';         // Maintain natural height
+    img.style.borderRadius = '16px';
+    img.style.objectFit = 'contain';   // No unwanted cropping
+    img.style.background = 'linear-gradient(120deg, #23243a 40%, #161926 100%)';
+    img.style.marginBottom = '16px';
+    img.style.boxShadow = '0 2px 16px #0007';
+    container.appendChild(img);
+  });
+  var modal = new bootstrap.Modal(document.getElementById('galleryModal'));
+  modal.show();
+}
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title >{% block title %}Siri Chandrashekar{% endblock %}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS FILES -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/templatemo-festava-live.css') }}" rel="stylesheet" />
+
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+<main>
+
+<div class="fixed-top-header">
+<header class="site-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between align-items-center flex-wrap">
+                <!-- Left placeholder or logo/text -->
+                <p class="d-flex mb-2">
+                    <!-- Optional: Add logo, name, or leave empty for spacing -->
+                </p>
+                <!-- Social icons: far right -->
+                <ul class="social-icon d-flex align-items-center mb-2 mb-lg-0 ms-auto">
+                    <li class="social-icon-item">
+                        <a href="https://facebook.com/YOUR_PROFILE" target="_blank" class="social-icon-link image-icon-link" aria-label="Facebook">
+                            <img src="{{ url_for('static', filename='images/fb.png') }}" alt="Facebook" style="width:35px; height:35px;">
+                        </a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="https://instagram.com/YOUR_PROFILE" target="_blank" class="social-icon-link image-icon-link" aria-label="Instagram">
+                            <img src="{{ url_for('static', filename='images/insta.png') }}" alt="Instagram" style="width:35px; height:35px;">
+                        </a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="https://youtube.com/@sirichandrashekar_dancer" target="_blank" class="social-icon-link image-icon-link" aria-label="YouTube">
+                            <img src="{{ url_for('static', filename='images/youtube.jpg') }}" alt="YouTube" style="width:35px; height:35px;">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/siri.jpg') }}" alt="Siri Chandrashekar" style="height:70px; width:130px;">
+                </a>
+
+                
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('performances') }}">Performances</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle no-arrow" href="/gallery" id="galleryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gallery
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="galleryDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('gallery') }}#photos">Photos</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('gallery') }}#videos">Videos</a></li>
+                        </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                        </li>
+
+                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+                              <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+            <li><a class="dropdown-item" href="{{ url_for('accolades') }}">Accolades</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('choreography') }}">Choreography</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('testimonials') }}">Testimonials</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('konnakol') }}">Konnakol</a></li>
+                             </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+</div>
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <!-- This div is for orange line -->
+        <div class="site-footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        
+                    </div>
+
+                    <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+                        <ul class="social-icon d-flex justify-content-lg-end">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<footer class="site-footer py-4 bg-dark text-white">
+  <div class="container"> <!-- adds consistent horizontal padding -->
+    <div class="row align-items-stretch">
+
+      <!-- Left: Links with some padding -->
+      <div class="col-lg-6 col-12 mb-4 pb-2">
+  <h5 class="site-footer-title mb-3">Quick Links</h5>
+
+  <ul class="footer-links-horizontal list-unstyled d-flex flex-wrap gap-4 align-items-start">
+    <li>
+      <a href="/about" class="site-footer-link">About</a>
+    </li>
+    <li>
+      <a href="/performances" class="site-footer-link">Performances</a>
+    </li>
+    <li class="position-relative footer-gallery-links">
+    <a href="/gallery" class="site-footer-link">Gallery</a>
+    <ul class="footer-submenu-links list-unstyled mt-2 mb-0">
+        <li><a href="{{ url_for('gallery') }}#photos" class="site-footer-link">Photos</a></li>
+        <li><a href="{{ url_for('gallery') }}#videos" class="site-footer-link">Videos</a></li>
+    </ul>
+    </li>
+    <li>
+      <a href="/contact" class="site-footer-link">Contact</a>
+    </li>
+    <li class="position-relative">
+      <a href="#" class="site-footer-link">More</a>
+      <ul class="footer-submenu-links list-unstyled mt-2 mb-0">
+        <li><a href="{{ url_for('accolades') }}" class="site-footer-link">Accolades</a></li>
+        <li><a href="{{ url_for('choreography') }}" class="site-footer-link">Choreography</a></li>
+        <li><a href="{{ url_for('testimonials') }}" class="site-footer-link">Testimonials</a></li>
+        <li><a href="{{ url_for('konnakol') }}" class="site-footer-link">Konnakol</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+      <!-- Divider: desktop only -->
+      <div class="d-none d-lg-flex col-lg-1 justify-content-center align-items-stretch">
+        <div class="footer-divider"></div>
+      </div>
+
+      <!-- Right: Newsletter & social icons -->
+      <div class="col-lg-5 col-12 d-flex flex-column justify-content-start align-items-lg-end align-items-start mb-4 pb-2">
+        <h5 class="newsletter-title mb-3 text-start text-lg-end">
+          The journey of dance is better when shared.<br> Let’s stay connected in rhythm!
+        </h5>
+        <form class="newsletter-form d-flex mb-3 w-100" action="#" method="post" style="max-width: 400px;">
+          <input type="email" class="form-control newsletter-input" placeholder="Email Address" required>
+          <button type="submit" class="btn btn-orange ms-2">Subscribe</button>
+        </form>
+        <ul class="social-icon d-flex align-items-center mb-2 mb-lg-0 ms-auto">
+          <li class="social-icon-item">
+            <a href="https://facebook.com/YOUR_PROFILE" target="_blank" class="social-icon-link image-icon-link" aria-label="Facebook">
+              <img src="/static/images/fb.png" alt="Facebook" style="width:35px; height:35px;">
+            </a>
+          </li>
+          <li class="social-icon-item">
+            <a href="https://instagram.com/YOUR_PROFILE" target="_blank" class="social-icon-link image-icon-link" aria-label="Instagram">
+              <img src="/static/images/insta.png" alt="Instagram" style="width:35px; height:35px;">
+            </a>
+          </li>
+          <li class="social-icon-item">
+            <a href="https://youtube.com/@sirichandrashekar_dancer" target="_blank" class="social-icon-link image-icon-link" aria-label="YouTube">
+              <img src="/static/images/youtube.jpg" alt="YouTube" style="width:35px; height:35px;">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+        
+
+        <div class="site-footer-bottom py-3">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="mb-2 mb-md-0 copyright-text">
+                © 2025 Siri Chandrashekar.All rights reserved.
+                </p>
+                <p class="mb-0">
+                Website designed and maintained by <br>Siri Chandrashekar
+                </p>
+            </div>
+        </div>
+
+
+
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

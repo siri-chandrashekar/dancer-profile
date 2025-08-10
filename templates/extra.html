@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('static/images/about2.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<div class="parallax"></div>
+
+<div style="height:1000px;background-color:rgb(30, 29, 29);font-size:36px">
+Scroll Up and Down this page to see the parallax scrolling effect.
+This div is just here to enable scrolling.
+Tip: Try to remove the background-attachment property to remove the scrolling effect.
+
+</div>
+
+<div class="parallax"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Performances Row -->
+ <h4 style="color: yellow; font-weight: bold;" class="mb-3">Performances</h4>
+<div class="position-relative" style="max-width: 100%; max-height: 500px; overflow:hidden;">
+
+  <!-- Image spanning full container -->
+  <img src="{{ url_for('static', filename='images/dummy.jpg') }}" 
+       class="img-fluid rounded shadow w-100 parallax" 
+       alt="Performances" 
+       style="max-height: 500px; object-fit: cover;">
+
+  <!-- Background slider with animations and parallax content class -->
+  <div class="slider-background parallax">
+    <ul class="exp-list mb-0 slider-content">
+      <li><strong>Ancient classical dance from Tamil Nadu </strong></li>
+      <li>Includes Nritta, Nritya, Natya elements</li>
+      <li>Expressive hand gestures and expressions</li>
+      <li>Adavus combine rhythm and grace</li>
+      <li>Performances follow structured Margam sequence</li>
+      <li>Dance as spiritual storytelling form</li>
+      <li>Solo and group dance dramas</li>
+      <li><strong>Ancient classical dance from Tamil Nadu </strong></li>
+      <li>Includes Nritta, Nritya, Natya elements</li>
+      <li>Expressive hand gestures and expressions</li>
+      <li>Adavus combine rhythm and grace</li>
+      <li>Performances follow structured Margam sequence</li>
+      <li>Dance as spiritual storytelling form</li>
+      <li>Solo and group dance dramas</li>
+    </ul>
+  </div>
+</div> 
