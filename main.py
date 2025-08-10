@@ -41,6 +41,21 @@ def testimonials():
 def konnakol():
     return render_template('konnakol.html')
 
+@app.route('/accolades')
+def accolades():
+    return render_template('accolades.html')
+
+@app.route('/choreography')
+def choreography():
+    return render_template('choreography.html')
+
+@app.route('/testimonials')
+def testimonials():
+    return render_template('testimonials.html')
+
+@app.route('/production')
+def production():
+    return render_template('production.html')
 
 
 

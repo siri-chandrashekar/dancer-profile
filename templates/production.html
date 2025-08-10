@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+
+{% block title %}Production - Siri Chandrashekar{% endblock %}
+
+{% block content %}
+<section class="production-section section-padding">
+    <div class="container">
+        <!-- Title Section -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 col-12 text-center">
+                <div class="production-header">
+                    <h1 class="production-title text-white mb-4">Dance Productions</h1>
+                    <div class="production-subtitle-wrapper">
+                        <div class="decorative-line"></div>
+                        <p class="production-subtitle text-white">Where tradition meets artistic innovation</p>
+                        <div class="decorative-line"></div>
+                    </div>
+                </div>
+                
+                <div class="production-description mt-5">
+                    <p class="text-white lead" style="text-align: justify; line-height: 1.8;">
+                        Our dance productions are carefully crafted artistic presentations that blend the ancient traditions of Bharatanatyam 
+                        with contemporary storytelling. Each production is a journey through mythology, spirituality, and human emotions, 
+                        brought to life through precise movements, expressive gestures, and soul-stirring music. These performances represent 
+                        years of dedication, training, and artistic exploration, creating immersive experiences that transport audiences 
+                        into the rich cultural heritage of Indian classical dance.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Gallery Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="text-center text-white mb-4" style="color: #F8CB2E !important;">Production Gallery</h3>
+                
+                <div class="production-gallery-grid">
+                    <div class="gallery-item" onclick="openProductionGallery(0)">
+                        <img src="{{ url_for('static', filename='images/artists/Vertical1.jpg') }}" alt="Production 1" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-text">
+                                <h5>Mythological Tales</h5>
+                                <p>Stories from ancient epics</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openProductionGallery(1)">
+                        <img src="{{ url_for('static', filename='images/artists/Hori1.jpg') }}" alt="Production 2" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-text">
+                                <h5>Devotional Expressions</h5>
+                                <p>Spiritual dance narratives</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openProductionGallery(2)">
+                        <img src="{{ url_for('static', filename='images/artists/Hori2.jpg') }}" alt="Production 3" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-text">
+                                <h5>Contemporary Fusion</h5>
+                                <p>Modern interpretations</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" onclick="openProductionGallery(3)">
+                        <img src="{{ url_for('static', filename='images/artists/Hori3.jpg') }}" alt="Production 4" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-text">
+                                <h5>Solo Presentations</h5>
+                                <p>Individual artistic expressions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yellow Divider -->
+        <div class="gallery-divider my-5" style="border-top: 4px solid #F8CB2E; width:100%;"></div>
+
+        <!-- Video Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="text-center text-white mb-4" style="color: #F8CB2E !important;">Production Videos</h3>
+                
+                <div class="production-videos-grid">
+                    <div class="custom-video-card">
+                        <a href="https://youtu.be/DIhBtd9xHm0?si=EWCy6TCP4NkmoSYX" target="_blank" rel="noopener">
+                            <div class="video-thumb-bg" style="background-image: url('{{ url_for('static', filename='images/youtubevideo1.jpg') }}')">
+                                <div class="video-card-overlay">
+                                    <div class="video-title">Varnam - Mathe Malayadhwaja</div>
+                                    <div class="video-publisher">Classical Production</div>
+                                    <button type="button" class="video-play-btn">
+                                        <span class="video-play-icon"></span> Watch Production
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="custom-video-card">
+                        <a href="https://youtu.be/eFStn24INfc?si=1F2lU7URFzGpRuNx" target="_blank" rel="noopener">
+                            <div class="video-thumb-bg" style="background-image: url('{{ url_for('static', filename='images/youtubevideo2.jpg') }}')">
+                                <div class="video-card-overlay">
+                                    <div class="video-title">Ananya Nruthyollasa</div>
+                                    <div class="video-publisher">Festival Performance</div>
+                                    <button type="button" class="video-play-btn">
+                                        <span class="video-play-icon"></span> Watch Production
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="custom-video-card">
+                        <a href="https://youtu.be/3kXzORN-X9Y?si=x326Ig9rqjF5IPia" target="_blank" rel="noopener">
+                            <div class="video-thumb-bg" style="background-image: url('{{ url_for('static', filename='images/youtubevideo3.jpg') }}')">
+                                <div class="video-card-overlay">
+                                    <div class="video-title">Aadenamma - Shiva Stuti</div>
+                                    <div class="video-publisher">Devotional Production</div>
+                                    <button type="button" class="video-play-btn">
+                                        <span class="video-play-icon"></span> Watch Production
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yellow Divider -->
+        <div class="gallery-divider my-5" style="border-top: 4px solid #F8CB2E; width:100%;"></div>
+
+        <!-- Testimonials Section -->
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-center text-white mb-5" style="color: #F8CB2E !important;">What Critics Say</h3>
+                
+                <div class="production-testimonials">
+                    <div class="testimonial-card-production">
+                        <div class="testimonial-quote">"</div>
+                        <blockquote class="testimonial-text-production">
+                            "Siri's productions are a masterful blend of traditional technique and contemporary vision. 
+                            Her ability to convey complex emotions through dance is truly remarkable, creating performances 
+                            that resonate deeply with audiences of all backgrounds."
+                        </blockquote>
+                        <div class="testimonial-author-production">
+                            <div class="author-name-production">Dr. Meera Krishnan</div>
+                            <div class="author-title-production">Dance Critic & Scholar</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card-production">
+                        <div class="testimonial-quote">"</div>
+                        <blockquote class="testimonial-text-production">
+                            "Each production showcases not just technical excellence but a deep understanding of the 
+                            spiritual and cultural significance of Bharatanatyam. The attention to detail in costume, 
+                            music, and choreography creates an unforgettable artistic experience."
+                        </blockquote>
+                        <div class="testimonial-author-production">
+                            <div class="author-name-production">Ravi Shankar</div>
+                            <div class="author-title-production">Cultural Arts Director</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card-production">
+                        <div class="testimonial-quote">"</div>
+                        <blockquote class="testimonial-text-production">
+                            "The productions demonstrate a rare combination of authenticity and innovation. 
+                            Siri's interpretations breathe new life into classical compositions while maintaining 
+                            the sacred essence of this ancient art form."
+                        </blockquote>
+                        <div class="testimonial-author-production">
+                            <div class="author-name-production">Priya Nair</div>
+                            <div class="author-title-production">Arts Journalist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Modal -->
+<div class="modal fade" id="productionGalleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content gallery-modal-bg">
+            <div class="modal-header">
+                <h5 class="modal-title text-white">Production Gallery</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                <img id="productionModalImage" src="" alt="Production Image" style="max-width: 90%; max-height: 80vh; border-radius: 12px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const productionImages = [
+    '{{ url_for('static', filename='images/artists/Vertical1.jpg') }}',
+    '{{ url_for('static', filename='images/artists/Hori1.jpg') }}',
+    '{{ url_for('static', filename='images/artists/Hori2.jpg') }}',
+    '{{ url_for('static', filename='images/artists/Hori3.jpg') }}'
+];
+
+function openProductionGallery(index) {
+    const modalImage = document.getElementById('productionModalImage');
+    modalImage.src = productionImages[index];
+    const modal = new bootstrap.Modal(document.getElementById('productionGalleryModal'));
+    modal.show();
+}
+
+// Fade-in animation on scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.gallery-item, .testimonial-card-production').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,274 @@
+{% extends "base.html" %}
+
+{% block title %}Konnakol - Siri Chandrashekar{% endblock %}
+
+{% block content %}
+<section class="konnakol-section section-padding">
+    <div class="container">
+        <!-- Introduction Section -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-10 col-12">
+                <div class="konnakol-intro text-center">
+                    <h1 class="konnakol-main-title text-white mb-4">Konnakol</h1>
+                    <div class="konnakol-subtitle-wrapper">
+                        <div class="decorative-line-konnakol"></div>
+                        <p class="konnakol-subtitle text-white">The Vocal Percussion of South Indian Classical Music</p>
+                        <div class="decorative-line-konnakol"></div>
+                    </div>
+                </div>
+                
+                <div class="konnakol-description mt-5">
+                    <p class="text-white lead" style="text-align: justify; line-height: 1.8;">
+                        Konnakol is the art of performing percussion syllables vocally. Originating from South Indian classical music, 
+                        it serves as both a teaching tool and a performance art. These rhythmic syllables - ta, ki, ta, ka, jham, ri - 
+                        represent the sounds of the mridangam and other percussion instruments. Konnakol requires precise timing, 
+                        mathematical understanding of rhythm cycles (talas), and the ability to improvise complex patterns while 
+                        maintaining the fundamental beat structure.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Journey Section -->
+        <div class="row mb-5">
+            <div class="col-lg-8 col-12 mx-auto">
+                <div class="journey-section">
+                    <h3 class="journey-title text-center mb-5" style="color: #F8CB2E;">My Journey with Konnakol</h3>
+                    
+                    <div class="journey-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h5 class="timeline-title">The Beginning</h5>
+                                <p class="timeline-text text-white">
+                                    My introduction to Konnakol began as a natural extension of my Bharatanatyam training. 
+                                    Understanding rhythm is fundamental to dance, and Konnakol provided the perfect bridge 
+                                    between musical theory and physical expression. Under my Guru's guidance, I learned 
+                                    to internalize complex rhythmic patterns.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h5 class="timeline-title">Deepening Practice</h5>
+                                <p class="timeline-text text-white">
+                                    As my understanding grew, I began to appreciate Konnakol as an independent art form. 
+                                    The mathematical precision required to execute complex patterns while maintaining 
+                                    musical flow challenged me to develop both intellectual and intuitive approaches 
+                                    to rhythm. Each practice session became a meditation on time and sound.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h5 class="timeline-title">Performance Integration</h5>
+                                <p class="timeline-text text-white">
+                                    Today, Konnakol is integral to my artistic expression. Whether performing solo 
+                                    or accompanying other musicians, I use these vocal rhythms to create dynamic 
+                                    conversations between movement and sound. It has enhanced my dance performances 
+                                    and opened new avenues for musical collaboration.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yellow Divider -->
+        <div class="gallery-divider my-5" style="border-top: 4px solid #F8CB2E; width:100%;"></div>
+
+        <!-- Gallery Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="text-center text-white mb-4" style="color: #F8CB2E !important;">Konnakol in Practice</h3>
+                
+                <div class="konnakol-gallery-grid">
+                    <div class="konnakol-gallery-item" onclick="openKonnakolGallery(0)">
+                        <img src="{{ url_for('static', filename='images/artists/Vertical2.jpg') }}" alt="Konnakol Practice 1" class="konnakol-gallery-image">
+                        <div class="konnakol-gallery-overlay">
+                            <div class="konnakol-gallery-text">
+                                <h6>Practice Session</h6>
+                                <p>Learning complex patterns</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="konnakol-gallery-item" onclick="openKonnakolGallery(1)">
+                        <img src="{{ url_for('static', filename='images/artists/Hori11.jpg') }}" alt="Konnakol Practice 2" class="konnakol-gallery-image">
+                        <div class="konnakol-gallery-overlay">
+                            <div class="konnakol-gallery-text">
+                                <h6>Performance</h6>
+                                <p>Live demonstration</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="konnakol-gallery-item" onclick="openKonnakolGallery(2)">
+                        <img src="{{ url_for('static', filename='images/artists/Hori22.jpg') }}" alt="Konnakol Practice 3" class="konnakol-gallery-image">
+                        <div class="konnakol-gallery-overlay">
+                            <div class="konnakol-gallery-text">
+                                <h6>Teaching</h6>
+                                <p>Sharing knowledge</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="konnakol-gallery-item" onclick="openKonnakolGallery(3)">
+                        <img src="{{ url_for('static', filename='images/artists/Hori33.jpg') }}" alt="Konnakol Practice 4" class="konnakol-gallery-image">
+                        <div class="konnakol-gallery-overlay">
+                            <div class="konnakol-gallery-text">
+                                <h6>Collaboration</h6>
+                                <p>Musical partnerships</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yellow Divider -->
+        <div class="gallery-divider my-5" style="border-top: 4px solid #F8CB2E; width:100%;"></div>
+
+        <!-- Achievements Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="text-center text-white mb-4" style="color: #F8CB2E !important;">Konnakol Achievements</h3>
+                
+                <div class="achievements-elegant">
+                    <div class="achievement-item-elegant">
+                        <div class="achievement-number">01</div>
+                        <div class="achievement-content">
+                            <h5 class="achievement-title-elegant">Advanced Certification</h5>
+                            <p class="achievement-desc-elegant">Completed advanced Konnakol training under renowned percussion masters</p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item-elegant">
+                        <div class="achievement-number">02</div>
+                        <div class="achievement-content">
+                            <h5 class="achievement-title-elegant">Performance Recognition</h5>
+                            <p class="achievement-desc-elegant">Featured Konnakol performances at major cultural festivals across India and USA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item-elegant">
+                        <div class="achievement-number">03</div>
+                        <div class="achievement-content">
+                            <h5 class="achievement-title-elegant">Teaching Excellence</h5>
+                            <p class="achievement-desc-elegant">Successfully trained over 50 students in the fundamentals of Konnakol</p>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item-elegant">
+                        <div class="achievement-number">04</div>
+                        <div class="achievement-content">
+                            <h5 class="achievement-title-elegant">Innovation Award</h5>
+                            <p class="achievement-desc-elegant">Recognized for integrating Konnakol with contemporary dance forms</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yellow Divider -->
+        <div class="gallery-divider my-5" style="border-top: 4px solid #F8CB2E; width:100%;"></div>
+
+        <!-- Video Section -->
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-center text-white mb-4" style="color: #F8CB2E !important;">Konnakol Demonstrations</h3>
+                
+                <div class="konnakol-videos-grid">
+                    <div class="custom-video-card">
+                        <a href="https://youtu.be/iMzM2vbx6yg?si=Rat6lyms4IE-nnpV" target="_blank" rel="noopener">
+                            <div class="video-thumb-bg" style="background-image: url('{{ url_for('static', filename='images/youtubevideo4.jpg') }}')">
+                                <div class="video-card-overlay">
+                                    <div class="video-title">Konnakol Basics</div>
+                                    <div class="video-publisher">Educational Series</div>
+                                    <button type="button" class="video-play-btn">
+                                        <span class="video-play-icon"></span> Learn Konnakol
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="custom-video-card">
+                        <a href="https://youtu.be/rlZs_-YY6XQ?si=DIqMnoCSZxNe6V5S" target="_blank" rel="noopener">
+                            <div class="video-thumb-bg" style="background-image: url('{{ url_for('static', filename='images/youtubevideo5.jpg') }}')">
+                                <div class="video-card-overlay">
+                                    <div class="video-title">Advanced Patterns</div>
+                                    <div class="video-publisher">Masterclass</div>
+                                    <button type="button" class="video-play-btn">
+                                        <span class="video-play-icon"></span> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Konnakol Gallery Modal -->
+<div class="modal fade" id="konnakolGalleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content gallery-modal-bg">
+            <div class="modal-header">
+                <h5 class="modal-title text-white">Konnakol Gallery</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                <img id="konnakolModalImage" src="" alt="Konnakol Image" style="max-width: 90%; max-height: 80vh; border-radius: 12px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const konnakolImages = [
+    '{{ url_for('static', filename='images/artists/Vertical2.jpg') }}',
+    '{{ url_for('static', filename='images/artists/Hori11.jpg') }}',
+    '{{ url_for('static', filename='images/artists/Hori22.jpg') }}',
+    '{{ url_for('static', filename='images/artists/Hori33.jpg') }}'
+];
+
+function openKonnakolGallery(index) {
+    const modalImage = document.getElementById('konnakolModalImage');
+    modalImage.src = konnakolImages[index];
+    const modal = new bootstrap.Modal(document.getElementById('konnakolGalleryModal'));
+    modal.show();
+}
+
+// Scroll animations
+document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.timeline-item, .konnakol-gallery-item, .achievement-item-elegant').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(el);
+    });
+});
+</script>
+{% endblock %}
